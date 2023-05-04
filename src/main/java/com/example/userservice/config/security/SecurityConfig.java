@@ -39,6 +39,7 @@ public class SecurityConfig {
         http
                 .csrf().disable()
                 .authorizeRequests()
+                .antMatchers("/actuator/**").permitAll()
                 .antMatchers("/**")
                 .hasIpAddress("127.0.0.1")
                 .and()
