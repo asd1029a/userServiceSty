@@ -41,7 +41,7 @@ public class SecurityConfig {
                 .authorizeRequests()
                 .antMatchers("/actuator/**").permitAll()
                 .antMatchers("/**")
-                .hasIpAddress("127.0.0.1")
+                .hasIpAddress("172.18.0.5")
                 .and()
                 .addFilter(getAuthenticationFilter())
                 .headers().frameOptions().disable();
