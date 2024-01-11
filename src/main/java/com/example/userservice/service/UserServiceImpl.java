@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserService {
         List<ResponseOrder> ordersList = circuitbreaker.run(() -> orderServiceClient.getOrders(userId),
                 throwable -> new ArrayList<>());
         log.info("After call orders microservice");
-        log.info("After call orders microservice");
+        log.info("After call orders microservice2");
         userDto.setOrders(ordersList);
         return userDto;
     }
